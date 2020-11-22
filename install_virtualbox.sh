@@ -2,6 +2,7 @@
 set -eu
 
 VIRTUALBOX_VERSION="${VIRTUALBOX_VERSION:-6.1}"
+KERNEL=$(uname -r)
 DIST=$(lsb_release -cs)
 ARCH=$(dpkg --print-architecture)
 
@@ -16,7 +17,7 @@ echo "Updating the APT cache..."
 apt-get update -qq
 
 echo "Installing the kernel headers..."
-apt-get install -yq "linux-headers-generic"
+apt-get install -yq "linux-headers-${KERNEL}"
 
 echo "Installing virtualbox..."
 apt-get install -yq "virtualbox-${VIRTUALBOX_VERSION}"
