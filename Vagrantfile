@@ -1,7 +1,9 @@
 $script = <<-'EOF'
 sudo /vagrant/install_virtualbox.sh
-sudo /vagrant/install_hashicorp_repo.sh
-sudo apt-get update -qq && sudo apt-get install -yq vagrant packer
+sudo /vagrant/install_hashicorp_packages.sh vagrant packer
+vboxmanage --version
+vagrant version
+packer version
 EOF
 
 
