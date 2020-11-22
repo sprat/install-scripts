@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-VIRTUALBOX_VERSION="${VIRTUALBOX_VERSION:-6.1}"
+VIRTUALBOX_VERSION="${1:-6.1}"
 KERNEL=$(uname -r)
 DIST=$(lsb_release -cs)
 ARCH=$(dpkg --print-architecture)
