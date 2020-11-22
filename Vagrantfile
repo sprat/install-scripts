@@ -1,7 +1,7 @@
 $script = <<-'EOF'
-sudo /vagrant/add_virtualbox_repo.sh
-sudo /vagrant/add_hashicorp_repo.sh
-sudo apt-get update -qq && sudo apt-get install -yq virtualbox-6.1 vagrant packer
+sudo /vagrant/install_virtualbox.sh
+sudo /vagrant/install_hashicorp_repo.sh
+sudo apt-get update -qq && sudo apt-get install -yq vagrant packer
 EOF
 
 
