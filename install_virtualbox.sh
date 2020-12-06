@@ -28,4 +28,4 @@ EXTPACK_FILENAME="Oracle_VM_VirtualBox_Extension_Pack-${EXTPACK_VERSION}.vbox-ex
 wget -q "https://download.virtualbox.org/virtualbox/${EXTPACK_VERSION}/${EXTPACK_FILENAME}"
 EXTPACK_LICENSE_SHA256=$(tar -xOf "${EXTPACK_FILENAME}" ./ExtPack-license.txt | sha256sum | cut -d' ' -f1)
 VBoxManage extpack install --accept-license="${EXTPACK_LICENSE_SHA256}" "${EXTPACK_FILENAME}"
-
+rm "${EXTPACK_FILENAME}"
